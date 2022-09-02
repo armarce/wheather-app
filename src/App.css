@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
+body{
+  font-family: 'Signika Negative', sans-serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F2D388;
+}
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  height: 90vh;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.App{
+  display: grid;
+  grid-template-areas: 'h1 h1'
+                        'h2 h2'
+                        'temp h3'
+                        'img info'
+                        'button button'
+                        ;
+  grid-template-columns: 140px 1fr;
+  padding: 20px 30px;
+  gap: 20px;
+  border-radius: 20px;
+  background-color: rgba(235, 239, 239, 0.64);
+  backdrop-filter: blur(120px);
+  backdrop-filter: contrast(19%);
+  backdrop-filter: brightness(90%);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+h1, h2, h3{
+  padding: 0;
+  margin: 0;
+  color: #2B4865;
+}
+.App h1{
+  grid-area: h1;
+  border-bottom: 1px dotted #999;
+  text-transform: uppercase;
+}
+.App h2{
+  grid-area: h2;
+  line-height: 30px;
+}
+.App span{
+  grid-area: temp;
+  font-size: 48px;
+  font-weight: bold;
+}
+.App h3{
+  grid-area: h3;
+  font-size: 22px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+.App i{
+  display: inline-block;
+  text-align: center;
+  width: 26px;
+  color: #256D85;
+}
+.App img#flag{
+  width: 30px;
+  height: 20px;
+}
+.App img#icon{
+  grid-area: img;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+.App ul{
+  grid-area: info;
+  text-align: left;
+  font-size: 18px;
+}
+.App ul li{
+  line-height: 30px;
+  color: #333;
+}
+.App ul li strong{
+  color: #256D85;
+}
+.App button{
+  grid-area: button;
+  margin: auto;
+  width: 120px;
+  padding: 6px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background-color: #DF711B;
+  opacity: 0.8;
+  color: #FFF;
+}
+.App button:hover{
+  opacity: 1;
+}
+
+/** 
+
+Loader pure css 
+
+https://cssloaders.github.io/
+
+**/
+
+.loader {
+  width: 175px;
+  height: 80px;
+  display: block;
+  margin:auto;
+  background-image: radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #FFF 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), linear-gradient(#FFF 50px, transparent 0);
+  background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+  background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+  background-repeat: no-repeat;
+  position: relative;
+  box-sizing: border-box;
+}
+.loader::before {
+  content: '';  
+  left: 60px;
+  bottom: 18px;
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FF3D00;
+  background-image: radial-gradient(circle 8px at 18px 18px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 18px 0px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 0px 18px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 36px 18px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 18px 36px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 30px 5px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 30px 5px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 30px 30px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 5px 30px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 5px 5px, #FFF 100%, transparent 0);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: rotationBack 3s linear infinite;
+}
+.loader::after {
+  content: '';  
+  left: 94px;
+  bottom: 15px;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #FF3D00;
+  background-image: radial-gradient(circle 5px at 12px 12px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 12px 0px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 0px 12px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 24px 12px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 12px 24px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 20px 3px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 20px 3px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 20px 20px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 3px 20px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 3px 3px, #FFF 100%, transparent 0);
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  animation: rotationBack 4s linear infinite reverse;
+}
+
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
