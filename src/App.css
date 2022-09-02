@@ -29,6 +29,7 @@ ul{
                         'button button'
                         ;
   grid-template-columns: 140px 1fr;
+  margin: 20px;
   padding: 20px 30px;
   gap: 20px;
   border-radius: 20px;
@@ -104,6 +105,24 @@ h1, h2, h3{
 }
 .App button:hover{
   opacity: 1;
+}
+
+@media screen and (max-width: 480px){
+ 
+  .App{
+    display: grid;
+    grid-template-areas: 'h1'
+                          'h2'
+                          'h3'
+                          'temp'
+                          'img'
+                          'info'
+                          'button'
+                          ;
+    grid-template-columns: 1fr;                      
+  }
+  
+
 }
 
 /** 

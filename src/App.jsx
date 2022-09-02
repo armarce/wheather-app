@@ -50,7 +50,7 @@ function App() {
     <div className="App" style={isLoader ? {display: 'none'} : {display: 'grid'}}>
       <h1>Wheather APP</h1>
       <Info data={data} temp={temp} icon={icon} flag={flag}/>
-      <button onClick={()=> setIsFarenheit(!isFarenheit)}>Degrees ºF/ºC</button>
+      <button onClick={()=> setIsFarenheit(!isFarenheit)}>Convert to {isFarenheit ? "ºF" : "ºC"}</button>
     </div>
     </>
   )
