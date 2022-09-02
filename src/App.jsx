@@ -40,10 +40,10 @@ function App() {
   const temp = isFarenheit ? `${Math.floor(data?.main?.temp - 273)} ºC` : `${Math.floor(1.8 * (data?.main?.temp - 273) + 32)} ºF`;
   const flag = `./flags/${data?.sys?.country.toLowerCase()}.svg`;
   const icon = `https://openweathermap.org/img/wn/${data?.weather?.[0]?.icon}@4x.png`;
-  const bg = `url('./public/bgs/${data?.weather?.[0]?.icon}.jpg')`;
+  const bg = `url('./bgs/${data?.weather?.[0]?.icon}.jpg')`;
 
   document.body.style['background-image'] = bg;
-  
+
   return (
     <>
     <div className="loader" style={isLoader ? {display: 'block'} : {display: 'none'}}></div>
