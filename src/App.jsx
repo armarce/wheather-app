@@ -27,13 +27,7 @@ function App() {
 
     let endPoint = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
     
-    axios.get(endPoint).then(response => setData(response.data));
-
-    /* Just For loader */
-
-    setTimeout(() =>{
-      setIsLoader(false);
-    }, 2000);
+    axios.get(endPoint).then(response => setData(response.data)).finally(() => setIsLoader(false));
 
   }
   
